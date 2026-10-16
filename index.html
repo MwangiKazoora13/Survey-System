@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coseke Survey System</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<a href="https://coseke.com/"><img src="Coseke-Logo.webp" alt="logo"></a>
+
+</header>
+    <p id="description" class="description">This is a client survey form on Coseke services</p>
+    <form method="POST" action="/api/submit" id="survey-form">
+
+<fieldset>
+    <label id="name-label">Enter Company Name:<input type="text" id="company_name" required placeholder="Name" class="groupone" /></label>
+    <label id="email-label">Enter Company Email:<input type="email" id="company_email" required placeholder="Email" class="groupone" /></label>
+    <label id="number-label">Enter Number(e.g.0700200100):<input type="number" id="number" min="0700000000" max="0799999999" placeholder="Number" required class="groupone" /></label>
+    
+    <label for="dropdown">How did you find us?</label>
+    <select id="location" title="location">
+        <option value="" selected>Select</option>
+        <option value="Online search">Online search</option>
+        <option value="Recommendation from other company">Recommendation from other company</option>
+        <option value="Social media">Social media (e.g. LinkedIn, Facebook)</option>
+        <option value="Business and tech fair">Business and tech fair</option>
+        <option value="Other">Other</option>
+      </select> 
+
+<p id="recommendation" title="recommendation">Would you recommend us to other companies?
+    <label for="Yes" class="dots"><input type="radio" id="Yes" name="choice" value="YES" class="input-radio">Yes</label>
+    <label for="Maybe" class="dots"><input type="radio" id="Maybe" name="choice" value="MAYBE" class="input-radio">Maybe</label>
+    <label for="No" class="dots"><input type="radio" id="No" name="choice" value="NO" class="input-radio">No</label>
+    </p>
+
+<p id="services" title="services">Which services did you find most useful?
+    <label for="EDMS" class="dots2"><input type="checkbox" id="Electronic Document Management Solution" value="Electronic Document Management Solution" class="input-checkbox">Electronic Document Management Solution</label>
+    <label for="DS" class="dots2"><input type="checkbox" id="Digitization Services" value="Digitization Services" class="input-checkbox">Digitization Services</label>
+    <label for="DIE" class="dots2"><input type="checkbox" id="Document Imaging Equipment" value="Document Imaging Equipment" class="input-checkbox">Document Imaging Equipment</label>
+    <label for="T&C" class="dots2"><input type="checkbox" id="Training and Consultancy" value="Training and Consultancy" class="input-checkbox">Training and Consultancy</label>
+    <label for="EBS" class="dots2"><input type="checkbox" id="E-Board Solutions" value="E-Board Solutions" class="input-checkbox">E-Board Solutions</label>
+    <label for="BI" class="dots2"><input type="checkbox" id="Business Intelligence" value="Business Intelligence" class="input-checkbox">Business Intelligence</label>
+    <label for="IH" class="dots2"><input type="checkbox" id="ICT Hardware" value="ICT Hardware" class="input-checkbox">ICT Hardware</label>
+    <label for="PA" class="dots2"><input type="checkbox" id="Physical Archives" value="Physical Archives" class="input-checkbox">Physical Archives</label>
+    <label for="VA" class="dots2"><input type="checkbox" id="Virtual A.G.Ms" value="Virtual A.G.Ms" class="input-checkbox">Virtual A.G.Ms</label>
+    <label for="ERP" class="dots2"><input type="checkbox" id="E.R.P" value="E.R.P" class="input-checkbox">E.R.P</label>
+    <label for="SI" class="dots2"><input type="checkbox" id="System Integrators" value="System Integrators" class="input-checkbox">System Integrators</label>
+</p>
+    
+    <label for ="comment">Any Comment? <textarea id="comment" rows="4" cols="10"></textarea></label>
+
+    <label for="submit"><input type="submit" id="submit"></label>
+</fieldset>
+
+<p id="outro" class="outro">Thank you for your feedback and thank you for choosing Coseke.</p>
+</form>
+
+
+
+<h3 class="contact">CONTACT US</h3>
+<div class="widgets"> 
+<div>
+
+<h3>Kenya</h3>
+    <address>+254 (020) 2730142/3/4</address>
+    <address>sales.ke@coseke.com</address>
+    <address>Nairobi, 1st Ngong Avenue, ACK Garden House, Ground Floor P. O. Box: 1208 - 00606</address>
+</div>
+<div>
+<h3>Uganda</h3>
+    <address>+256 (41) 4340282/3</address>
+    <address>sales.ug.coseke.com</address>
+    <address>Kampala, Jinja Road, Social Security House, Plot 4, Northern Wing, 3rd Floor P. O. Box: 37849</address>
+</div>
+<div>
+<h3>Tanzania</h3>
+    <address>+255 (22) 2200048/49/50</address>
+    <address>sales.tz@coseke.com</address>
+    <address>Dar es salaam, Azikiwe/Jamhuri Street, Benjamin Mkapa Tower, 6th Floor P. O. Box: 76413</address>
+</div>
+<div>
+<h3>Rwanda</h3>
+    <address>+250 (252) 571690</address>
+    <address>sales.rw@coseke.com</address>
+    <address>Kigali, National Amahoro Stadium Road, KG 11AV, Nobiscum house, 4th Floor P. O. Box: 5755</address>
+</div>
+<div id="data"></div>
+<script src="Script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Login</title>
+    <link href="login.css" rel="stylesheet">
+</head>
+<body>
+    <form action="http://127.0.0.1:8080">
+    <a href="https://coseke.com/"><img src="Coseke-Logo.webp" alt="logo"></a>
+    <h4>Client Survey Form</h4>
+    <label id="email-label"><input type="email" id="Email" required placeholder="Email" class="groupone" /></label>
+    <label id="password-label"><input type="password" id="password" required placeholder="Password" class="groupone" /></label>
+    <label for="Login"><input type="Submit" id="Login" value="Enter" onclick="validatePassword()"></label>
+</form>
+<script>
+    function validatePassword() {
+        const enteredPassword = document.getElementById('password').value;
+        const correctPassword = 'password123';
+
+        if (enteredPassword === correctPassword) {
+        } else {
+            alert('Wrong password. Please try again.');
+            event.preventDefault();
+        }
+    }
+</script>
+</body>
+</html>
